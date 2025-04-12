@@ -22,17 +22,17 @@
 <section id="munkak">
     <h2>Munkáim</h2>
     <div class="gallery">
-        <img src="images/vizjel1.jpg" alt="Tetoválás">
-        <img src="images/vizjel2.jpg" alt="Tetoválás">
-        <img src="images/vizjel3.jpg" alt="Tetoválás">
+        <img src="images/vizjel1.jpg" alt="Tetoválás" class="fade-in"> 
+        <img src="images/vizjel2.jpg" alt="Tetoválás" class="fade-in"> 
+        <img src="images/vizjel3.jpg" alt="Tetoválás" class="fade-in">
     </div>
 </section>
 
 <section id="info">
     <h2>Információk</h2>
     <div class="info-images">
-        <img src="images/info1.jpg" alt="Információs kép 1">
-        <img src="images/info2.jpg" alt="Információs kép 2">
+        <img src="images/info1.jpg" alt="Információs kép 1" class="fade-in">
+        <img src="images/info2.jpg" alt="Információs kép 2" class="fade-in">
     </div>
 </section>
 
@@ -40,6 +40,7 @@
     <h2>Kapcsolat</h2>
     <ul class="contact-list">
         <li><a href="https://www.instagram.com/darkwater.tattoo" target="_blank">Instagram</a></li>
+        <li><a href="https://www.facebook.com/61575246801185" target="_blank">Facebook</a></li>
         <li><a href="mailto:darkwater.tatto@gmail.com">Email</a></li>
         <li><a href="tel:+36706317835">Telefon: +36 70 631 7835</a></li>
     </ul>
@@ -51,5 +52,26 @@
     <footer>
         <p>&copy; 2025 DarkWater Tattoo</p>
     </footer>
+<script>
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
+
 </body>
 </html>
