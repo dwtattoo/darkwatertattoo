@@ -173,3 +173,35 @@ h2 {
 nav ul li a {
   font-size: 35px;
 }
+.munkavideo {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+# munkak .gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* távolság a képek és videók között */
+    flex-wrap: wrap; /* ha szűk lesz a hely, új sorba rakja őket */
+}
+
+# munkak .images,
+# munkak .videos {
+    flex: 1 1 45%; /* Mindkét div a szülő szélességének 45%-át foglalja el */
+}
+
+# munkak .images img {
+    width: 100%; /* a képek kitöltik a divet */
+    height: auto; /* megőrzi az arányokat */
+    margin-bottom: 10px; /* távolság a képek között */
+}
+
+# munkak .munkavideo {
+    width: 100%; /* a videók kitöltik a divet */
+    height: auto;
+    margin-bottom: 10px; /* távolság a videók között */
+}
