@@ -231,3 +231,8 @@ nav ul li a {
   transition: transform 0.1s linear;
   transform-origin: center;
 }
+#impresszum {
+        font-size: 0.85em;
+        color: #888;
+        margin-top: 10px;
+    }
