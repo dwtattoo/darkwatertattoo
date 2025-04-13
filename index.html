@@ -9,6 +9,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 </head>
+<body>
+
+<div id="preloader">
+  <img src="images/logo.png" alt="DarkWater Tattoo Logo" class="logo-loader">
+</div>
+
 <header class="only-logo">
     <img src="images/logo.png" alt="DarkWater Tattoo logó" class="big-logo">
     </div>
@@ -27,6 +33,8 @@
         <img src="images/vizjel1.jpg" alt="Tetoválás" class="fade-in"> 
         <img src="images/vizjel2.jpg" alt="Tetoválás" class="fade-in"> 
         <img src="images/vizjel3.jpg" alt="Tetoválás" class="fade-in">
+  </div>
+  <div class="media-container">
   <video class="munkavideo fade-in" controls autoplay muted>
     <source src="videos/munkam1.mp4" type="video/mp4">
   </video>
@@ -79,6 +87,20 @@
 
   faders.forEach(fader => {
     appearOnScroll.observe(fader);
+  });
+</script>
+
+<script>
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+
+    // Legalább 2 másodpercig legyen látható
+    setTimeout(() => {
+      preloader.style.opacity = "0";
+      setTimeout(() => {
+        preloader.style.display = "none";
+      }, 500); // fade-out után eltűnik
+    }, 3000); // <- itt tudod állítani a minimális időt (ms-ben)
   });
 </script>
 
