@@ -227,3 +227,7 @@ nav ul li a {
     transform: scale(1.1);
   }
 }
+.big-logo {
+  transition: transform 0.1s linear;
+  transform-origin: center;
+}

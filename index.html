@@ -67,7 +67,7 @@
 </section>
 
     <footer>
-        <p>&copy; 2025 DarkWater Tattoo</p>
+        <p>&copy; 2025 DarkWater Tattoo - Petrik Márk E.V.</p>
     </footer>
 <script>
   const faders = document.querySelectorAll('.fade-in');
@@ -101,6 +101,18 @@
         preloader.style.display = "none";
       }, 500); // fade-out után eltűnik
     }, 3000); // <- itt tudod állítani a minimális időt (ms-ben)
+  });
+</script>
+
+<script>
+  const logo = document.querySelector('.big-logo');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const rotation = scrollY * 0.1;
+    const opacity = Math.max(1 - scrollY / 1000, 0.3);
+    logo.style.transform = `rotate(${rotation}deg)`;
+    logo.style.opacity = opacity;
   });
 </script>
 
