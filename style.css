@@ -236,3 +236,6 @@ nav ul li a {
         color: #888;
         margin-top: 10px;
     }
+html {
+  scroll-behavior: smooth;
+}
