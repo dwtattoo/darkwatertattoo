@@ -72,7 +72,10 @@
 
     <footer>
         <p>&copy; 2025 DarkWater Tattoo</p>
-    <div id="impresszum">
+    <p>
+        <a href="#" id="toggleImpresszum">Impresszum</a>
+    </p>
+    <div id="impresszum" style="display: none;">
         <p><strong>Impresszum</strong></p>
         <p>Szolgáltató neve: Petrik Márk egyéni vállalkozó</p>
         <p>Székhely: 7130 Tolna, Bajcsy-Zsilinszky utca 120. FS 5. ajtó</p>
@@ -82,6 +85,18 @@
         <p>Telefon: +36 70 631 7835</p>
     </div>
 </footer>
+
+<script>
+    document.getElementById("toggleImpresszum").addEventListener("click", function(event) {
+        event.preventDefault();
+        var impresszum = document.getElementById("impresszum");
+        if (impresszum.style.display === "none") {
+            impresszum.style.display = "block";
+        } else {
+            impresszum.style.display = "none";
+        }
+    });
+</script>
 
 <script>
   const faders = document.querySelectorAll('.fade-in');
