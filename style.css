@@ -232,10 +232,16 @@ nav ul li a {
   transform-origin: center;
 }
 #impresszum {
-        font-size: 0.85em;
-        color: #888;
-        margin-top: 10px;
-    }
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 10px;
+    line-height: 1.6;
+}
+#toggleImpresszum {
+    cursor: pointer;
+    color: #888;
+    text-decoration: underline;
+}
 html {
   scroll-behavior: smooth;
 }
