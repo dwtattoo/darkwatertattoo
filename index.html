@@ -145,24 +145,5 @@
   });
 </script>
 
-<script>
-  const typingElements = document.querySelectorAll('.typing');
-
-  const showTyping = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.animation = "typing 2s steps(20, end) forwards, blink 0.7s step-end infinite";
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.7
-  });
-
-  typingElements.forEach(el => {
-    showTyping.observe(el);
-  });
-</script>
-
 </body>
 </html>
